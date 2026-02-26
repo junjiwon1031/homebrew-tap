@@ -1,6 +1,6 @@
 cask "bongocat-kb-mac" do
-  version "0.0.1"
-  sha256 "6d1afed5a7c49cbfd5d3260fea899d1dcf27e4ff1698923916a146018b64394a"
+  version "0.0.2"
+  sha256 "60e7d773c7fef8788b74eec126184d56c4be1e24b5d23b9639428c269aba0ed9"
 
   url "https://github.com/junjiwon1031/bongocat-kb-mac/releases/download/v#{version}/BongoCatNoMouse.zip"
   name "BongoCatNoMouse"
@@ -10,12 +10,6 @@ cask "bongocat-kb-mac" do
   depends_on macos: ">= :sonoma"
 
   app "BongoCatNoMouse.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-d", "com.apple.quarantine", "#{appdir}/BongoCatNoMouse.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Preferences/com.bongocat.nomouse.plist",
