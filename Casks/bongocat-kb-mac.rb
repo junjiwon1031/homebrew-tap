@@ -1,6 +1,6 @@
 cask "bongocat-kb-mac" do
-  version "1.0.0"
-  sha256 "PLACEHOLDER"
+  version "0.0.1"
+  sha256 "6d1afed5a7c49cbfd5d3260fea899d1dcf27e4ff1698923916a146018b64394a"
 
   url "https://github.com/junjiwon1031/bongocat-kb-mac/releases/download/v#{version}/BongoCatNoMouse.zip"
   name "BongoCatNoMouse"
