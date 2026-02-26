@@ -11,6 +11,12 @@ cask "bongocat-kb-mac" do
 
   app "BongoCatNoMouse.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-d", "com.apple.quarantine", "#{appdir}/BongoCatNoMouse.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Preferences/com.bongocat.nomouse.plist",
   ]
